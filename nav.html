@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Float</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: gray;
+        }
+
+        .navbar-logo {
+            float: left;
+        }
+
+        .navbar-menu {
+            float: right;
+        }
+
+        nav::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        .navbar-menu li {
+            display: inline-block;
+            list-style: none;
+        }
+
+        a,.toggle {
+            width: 150px;
+            height: 50px;
+            display: block;
+            border: 1px solid red;
+            line-height: 50px;
+            text-align: center;
+            text-decoration: none;
+            color: brown;
+
+        }
+        .toggle{
+            background-color: transparent;
+            border: 0;
+            float: right;
+            display:none;
+        }
+        @media(max-width: 992px){
+            .toggle{
+                display: block;
+            }
+            .navbar-menu{
+                display: none;
+                width: 100%;
+            }
+            .navbar-menu li{
+                display:block;
+            }
+            .navbar-menu li a{
+                width:100%;
+            }
+            .toggle:hover + .navbar-menu{
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#" class="navbar-logo">Logo</a>
+        <button class="toggle"><i class="fa-solid fa-bars"></i></button>
+        <ul class="navbar-menu">
+            <li ><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

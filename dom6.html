@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .t1{
+        border: 2px solid;
+
+      }
+    </style>
+</head>
+<body>
+    <table class="t1"></table>
+    <script>
+        const table=document.querySelector('table');
+        const fruits=[
+            "apple","watermelon","orange","mango","strawberry","grapes",
+        ]
+    
+        fruits.forEach(function(f){
+        const tr=document.createElement('tr');
+        table.append(tr);
+        const td=document.createElement('td');
+        tr.append(td);
+        td.append(f);
+        });
+    </script>
+</body>
+</html>

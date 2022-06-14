@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {border: 1px solid;
+               width: 100px;
+               height: 100px;
+        }
+        .red{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script>
+        const box1=document.querySelector(".box");
+        box1.addEventListener("click",function(){
+            //   if(box1.style.backgroundColor == "red"){
+            //       box1.style.backgroundColor ="";
+            //   }else{
+            //       box1.style.backgroundColor="red";
+            //   }
+             if(box1.classList.contains("red")){
+                 box1.classList.remove("red");
+             }else{
+                box1.classList.add("red");
+             }
+            //box1.classList.toggle("red");
+        })
+    </script>
+    
+</body>
+</html>

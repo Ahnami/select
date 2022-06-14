@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color:red;
+        }
+        .bg-gray{
+            background-color:gray;
+        }
+    </style>
+</head>
+<body>
+    <p class="red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, at.</p>
+    <script>
+        const paragraph=document.querySelector('p');
+        console.log(paragraph.classList);
+        paragraph.classList.add('bg-gray');
+        console.log(paragraph.classList);
+        paragraph.classList.remove('red');
+        console.log(paragraph.classList);
+        if(paragraph.classList.contains('bg-gray')){
+            console.log('contains');
+        }else{
+            console.log('none');
+        }
+    </script>
+</body>
+</html>
